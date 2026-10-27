@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ML Hub — модели</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">ML Hub</a>
+    <nav>
+      <a href="/">Обзор</a>
+      <a href="/models">Модели</a>
+      <a href="/datasets">Датасеты</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Модели</h1>
+    <p>Текущие модели классификации аудио и их метрики на валидационной выборке.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Модель</th><th>Архитектура</th><th>Датасет</th><th>Accuracy</th><th>F1</th><th>Параметры</th><th>Статус</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>AudioCNN v2</b></td><td>CNN на мел-спектрограммах</td><td>Project Sounds v1</td><td>92.4%</td><td>0.91</td><td>4.2M</td><td><span class="tag prod">prod</span></td></tr>
+          <tr><td><b>Wav2Vec2-finetune</b></td><td>Transformer</td><td>Project Sounds v1</td><td>90.1%</td><td>0.89</td><td>95M</td><td><span class="tag test">тестируется</span></td></tr>
+          <tr><td><b>YAMNet baseline</b></td><td>MobileNet v1</td><td>ESC-50</td><td>84.7%</td><td>0.83</td><td>3.7M</td><td><span class="tag test">тестируется</span></td></tr>
+          <tr><td><b>AudioCNN v1</b></td><td>CNN на мел-спектрограммах</td><td>UrbanSound8K</td><td>86.0%</td><td>0.85</td><td>3.9M</td><td><span class="tag old">архив</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Метрики тестовые.</p>
+  </main>
+
+  <footer class="footer">ML Hub · тестовая версия</footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>
